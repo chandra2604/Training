@@ -16,26 +16,30 @@
                <div class="form1">
                 <h3 class="demo"><u>Filling the All Details</u></h3>
                </div>
+             
                <form class="form-horizontal">
                 <div class="form-group">
                 <label>Firstname:</label>
-                    <input type="text" class="name" name="name" placeholder="CHANDRA S" >
+                    <input type="text" id="name" name="name" placeholder="CHANDRA S" >
                 </div>
-                <div class="form-group">
+                
+                <div class="form-group">`
                     <label>Age:</label>
-                    <input type="text" class="Age" name="age" placeholder="22">
+                    <input type="number" id="Age" name="age" placeholder="22">
                 </div>
+               
                 <div class="form-group">
                     <label>Email:</label>
-                    <input type="text" class="mail" name="email" placeholder="chandra24@hmail.com">
+                    <input type="text" id="mail" name="email" placeholder="chandra24@hmail.com">
                 </div>
+               
                 <div class="form-group">
                     <label>Des:</label>
-                    <input type="text" class="Des" name="des" placeholder="DEVELOPER">
+                    <input type="text" id="Des" name="des" placeholder="DEVELOPER">
                 </div>
             
                </form>
-             <button class="button-lg butn1" onclick="fun()">Click Me!</button>
+             <button class="button-lg butn1" onclick="myfunction()">Click Me!</button>
               
             </div>
             <div class="col-lg-5 col1">
@@ -43,24 +47,54 @@
              </div>   
         </div>
     </div>
-
-
-
-
- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <table class =" table table-bordered" id="table1">
+                    <tr>
+                        <th>FName</th>
+                        <th>Age</th>
+                        <th>Email</th>
+                        <th>Des</th>
+                    </tr>
+                     </table>
+            </div>
+        </div>
+    </div>
 
  
 <script>
+    function myfunction(){
+        let x={};
+        x.fname=document.getElementById("name").value;
+        alert(x.fname);
+        x.age=document.getElementById("Age").value;
+        alert(x.age);
+        x.email=document.getElementById("mail").value;
+        alert(x.email);
+        x.des=document.getElementById("Des").value;
+        alert(x.des);
+        var table=document.getElementById("table1");
+        var row=table.insertRow();
+        var cell1=row.insertCell(0);
+        var cell2=row.insertCell(1);
+        var cell3=row.insertCell(2);
+        var cell4=row.insertCell(3);
+        cell1.innerHTML=x.fname;
+        cell2.innerHTML=x.age;
+        cell3.innerHTML=x.email;
+        cell4.innerHTML=x.des;
 
-    function fun() {  
-    alert("process Done");  
-    }  
+
+
+
+    }
 </script> 
 
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-<!--{name: "aaa", age: 13, email: "sasdd", des: "sss"}
+
 
 
 

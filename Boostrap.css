@@ -42,3 +42,7 @@ label{
     padding-top: 20px;
     padding-right: 20px;
 }
+.table{
+    border:20px;
+    width: 48%; 
+}
